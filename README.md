@@ -20,11 +20,14 @@ git clone https://github.com/saad167/flask_ML.git
 </code>
 
 <br>
+
 * install requirements 
+
 <code>
 pip install requirements.txt
 </code>
 
+<br>
 
 * run the app 
 
