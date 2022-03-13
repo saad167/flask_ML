@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 
 # Create flask app
-flask_app = Flask(__name__)
+app = Flask(__name__)
 model = pickle.load(open("model.pkl", "rb"))
 
 
@@ -32,7 +32,7 @@ def resultat():
     prediction= prediction[0]
     return prediction
 
-@flask_app.route('/', methods=['GET','POST'])
+@app.route('/', methods=['GET','POST'])
 def predict():
     if request.method == 'GET':
         return render_template('index.html')
@@ -41,4 +41,4 @@ def predict():
         return render_template('index.html', _anchor="index.html#result", prediction_text=_text)
     
 if __name__ == "__main__":
-    flask_app.run(debug=True)
+    app.run(debug=True)
