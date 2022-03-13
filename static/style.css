@@ -1,0 +1,59 @@
+body {
+  background: linear-gradient(
+      to right,
+      rgba(43, 116, 104, 0.521),
+      rgba(58, 119, 128, 0.541)
+    ), url("../static/pic.png") no-repeat center center fixed;
+    background-size: cover;
+}
+.acceuil{
+  font-family: 'Trebuchet MS','Verdana';
+  font-weight: bold;
+  line-height: 1.2;
+}
+.btn-primary{
+  color: white;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+.btn-primary:hover{
+  background: turquoise;
+  border: 1px solid white;
+}
+
+input[type=text],input[type=float] ,select {
+  width: 50%;
+  padding: 6px 8px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 50%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 7px 13px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+div form {
+  border-radius: 5px;
+  background-color: #f2f2f256;
+  padding: 10px;
+  margin: auto 10px ;
+}
+a{
+  color: white;
+}
+a:hover{
+  color: white;
+}

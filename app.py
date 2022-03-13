@@ -6,18 +6,8 @@ import pickle
 flask_app = Flask(__name__)
 model = pickle.load(open("model.pkl", "rb"))
 
-@flask_app.route("/")
-def Home():
-    return render_template("index.html")
 
-
-@flask_app.route("/pre")
-def pre():
-    return render_template("pre.html")
-
-
-@flask_app.route("/predict", methods = ["POST"])
-def predict():
+def resultat():
     l=np.zeros(8)
     l[7]= request.form['nbexp']
     sexe=request.form['sexe']
@@ -40,7 +30,15 @@ def predict():
 
     prediction = model.predict(features)
     prediction= prediction[0]
-    return render_template("predict.html", prediction_text = "Votre salaire est de : {prediction:.2f} MAD".format(prediction=prediction))
+    return prediction
 
+@flask_app.route('/', methods=['GET','POST'])
+def predict():
+    if request.method == 'GET':
+        return render_template('index.html')
+    else:      
+        _text ="Votre salaire est de : {prediction:.2f} MAD".format(prediction=resultat())
+        return render_template('index.html', _anchor="index.html#result", prediction_text=_text)
+    
 if __name__ == "__main__":
     flask_app.run(debug=True)
