@@ -18,7 +18,8 @@ A screenshot of the app
 <code>
 git clone https://github.com/saad167/flask_ML.git
 </code>
-
+<br>
+<br>
 <br>
 
 * install requirements 
@@ -27,6 +28,8 @@ git clone https://github.com/saad167/flask_ML.git
 pip install requirements.txt
 </code>
 
+<br>
+<br>
 <br>
 
 * run the app 
