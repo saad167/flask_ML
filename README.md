@@ -36,7 +36,7 @@ pip install requirements.txt
 
 ## Try it online
 
-<a href=""> the link </a>
+<a href="https://salariesprediction.herokuapp.com/"> the link </a>
 
 ## Used technolgies:
 
